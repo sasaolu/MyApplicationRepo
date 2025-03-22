@@ -43,7 +43,7 @@ pipeline {
     stage ('DEV Deploy') {
       steps {
       echo "deploying to DEV Env "
-      deploy adapters: [tomcat9(credentialsId: '8ad8304d-e626-42b4-ae0b-d2c5295b2725', path: '', url: 'http://ec2-18-234-50-205.compute-1.amazonaws.com:8080')], contextPath: null, war: '**/*.war'
+      deploy adapters: [tomcat9(credentialsId: '8ad8304d-e626-42b4-ae0b-d2c5295b2725', path: '', url: 'http://ec2-18-234-50-205.compute-1.amazonaws.com:8080/')], contextPath: null, war: '**/*.war'
       }
     }
     // stage ('Slack Notification') {
